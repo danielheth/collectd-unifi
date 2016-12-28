@@ -14,8 +14,7 @@ npm install -g collectd-unifi
 
 ## Configure CollectD
 - Assuming you've copied this repo into /opt/collectd-unifi and have already run `npm install` to pull down dependencies.
-```TypesDb "/home/daniel/collectd-unifi/types.db"
-LoadPlugin exec
+```LoadPlugin exec
 <Plugin exec>
         Exec "daniel" "node /opt/collectd-unifi/collectd-unifi.js" "--unifi" "[ip of controller]" "[port of controller]" "[username]" "[password]"
 </Plugin>
