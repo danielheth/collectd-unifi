@@ -44,7 +44,8 @@ LoadPlugin network
 
 #### InfluxDB
 Configuring InfluxDB was also relatively easy... and OOB with minor changes.
-```[[collectd]]
+```
+[[collectd]]
   enabled = true
   bind-address = ":25826" # the bind address
   database = "collectd" # Name of the database that will be written to
@@ -53,7 +54,8 @@ Configuring InfluxDB was also relatively easy... and OOB with minor changes.
   batch-pending = 10 # number of batches that may be pending in memory
   batch-timeout = "10s"
   read-buffer = 0 # UDP read buffer size, 0 means to use OS default
-  typesdb = "/usr/share/collectd/types.db"```
+  typesdb = "/usr/share/collectd/types.db"
+```
 
 
 ## References
