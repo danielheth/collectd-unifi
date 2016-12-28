@@ -13,7 +13,7 @@ npm install -g collectd-unifi
 ```
 LoadPlugin exec
 <Plugin exec>
-        Exec "daniel" "node /opt/collectd-unifi/collectd-unifi.js" "--unifi" "[ip of controller]" "[port of controller]" "[username]" "[password]"
+        Exec "nobody" "node /opt/collectd-unifi/collectd-unifi.js" "--unifi" "[ip of controller]" "[port of controller]" "[username]" "[password]"
 </Plugin>
 ```
 
