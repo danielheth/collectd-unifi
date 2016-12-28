@@ -109,7 +109,7 @@ function getAssets() {
 function printControllerStats() {
     return getAssets()
         .then(assets => {
-            putVal(`${unifiConfig.host}/unifi_num_sta/ath_nodes`, assets.length);
+            putVal(`${unifiConfig.host}/network/assets_count`, assets.length);
         });
 }
 
