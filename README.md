@@ -17,7 +17,7 @@ LoadPlugin exec
 </Plugin>
 ```
 
-### Helpful Other Configurations...
+### Other Helpful Configurations...
 I'm using this script as part of a collectd-influxdb-grafana integration to display the most vital parts of my Ubiquiti Unifi network
 on a large television I have in my office.  While developing this project, I learned certain things were required.
 Background:  I have collectd, influxdb, and grafana running on a simple Intel NUC running Ubuntu 16.10 connected directly to the
