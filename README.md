@@ -14,3 +14,7 @@ npm install -g collectd-unifi
 
 ## Configure CollectD
 
+
+
+## References
+- https://collectd.org/documentation/manpages/collectd-exec.5.shtml

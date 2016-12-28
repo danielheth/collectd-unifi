@@ -79,7 +79,7 @@ if (unifiIndex >= 0) {
 
 function putVal(identifier, values) {
     var milliseconds = (new Date).getTime();
-    process.stdout.write(`PUTVAL ${identifier} interval=${collectdInterval} ${milliseconds}:${values}\n`);
+    process.stdout.write(`PUTVAL "${identifier}" interval=${collectdInterval} ${milliseconds}:${values}\n`);
 }
 
 
