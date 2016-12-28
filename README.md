@@ -8,7 +8,7 @@ npm install -g collectd-unifi
 ```
 
 ## Configure CollectD
-- Assuming you've copied this repo into /opt/collectd-unifi and have already run `npm install` to pull down dependencies.
+Assuming you've copied this repo into /opt/collectd-unifi and have already run `npm install` to pull down dependencies.
 
 ```
 LoadPlugin exec
