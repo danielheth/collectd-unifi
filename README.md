@@ -9,7 +9,9 @@ npm install -g collectd-unifi
 
 ## Configure CollectD
 - Assuming you've copied this repo into /opt/collectd-unifi and have already run `npm install` to pull down dependencies.
-```LoadPlugin exec
+
+```
+LoadPlugin exec
 <Plugin exec>
         Exec "daniel" "node /opt/collectd-unifi/collectd-unifi.js" "--unifi" "[ip of controller]" "[port of controller]" "[username]" "[password]"
 </Plugin>
@@ -23,14 +25,16 @@ television display.  The Unifi controller is running on another machine which th
 
 #### CollectD
 `rrd` is a required plugin for data to be pushed over to InfluxDB.  Here is the configuration I have within collectd for this integration:
-```LoadPlugin rrdtool
+```
+LoadPlugin rrdtool
 <Plugin rrdtool>
         DataDir "/var/lib/collectd/rrd"
 </Plugin>
 ```
 
 `influxdb` requires a bit of config also in order for collectd to push data...
-```LoadPlugin network
+```
+LoadPlugin network
 <Plugin network>
         Server "127.0.0.1" "25826"
         MaxPacketSize 1452
