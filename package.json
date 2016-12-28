@@ -1,0 +1,39 @@
+{
+  "name": "collectd-unifi",
+  "version": "1.0.0",
+  "description": "Collection script for CollectD and Ubiquiti UniFi networking equipment.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "discover-unifi": "collectd-unifi.js"
+  },
+  "engines": {
+    "node": ">=4.4.0"
+  },
+  "files": [
+    "discover-unifi.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/danielheth/collectd-unifi.git"
+  },
+  "keywords": [
+    "CollectD",
+    "Ubiquiti",
+    "UniFi",
+    "NodeJS"
+  ],
+  "author": "Daniel H Moran <danielheth@hotmail.com>",
+  "license": "SEE LICENSE",
+  "bugs": {
+    "url": "https://github.com/danielheth/collectd-unifi/issues"
+  },
+  "homepage": "https://github.com/danielheth/collectd-unifi#readme",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "lodash": "^4.17.3",
+    "prompt-sync": "^4.1.4",
+    "ubiquiti-unifi": "^1.0.0"
+  }
+}
