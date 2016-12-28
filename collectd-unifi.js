@@ -69,7 +69,7 @@ if (unifiIndex >= 0) {
         unifiConfig[expectedArgs[e]] = password;
     }
 
-    unifiConfig.url = `http://${unifiConfig.host}`;
+    unifiConfig.url = `https://${unifiConfig.host}`;
 } else {
     process.stdout.write('--unifi is required input');
     process.exit(1);
