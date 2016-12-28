@@ -1,0 +1,2 @@
+tx_performance         dropped:COUNTER:0:U, retries:COUNTER:0:U, packets:COUNTER:0:U
+num_sta                ng:GAUGE:0:U, na:GAUGE:0:U
