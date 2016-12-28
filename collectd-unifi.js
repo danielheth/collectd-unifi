@@ -2,11 +2,10 @@
 'use strict';
 
 const prompt = require('prompt-sync')(),
-    _ = require('lodash'),
     bluebird = require('bluebird'),
     ubiquitiUnifi = require('ubiquiti-unifi');
 
-process.title = 'discover-unifi';
+process.title = 'collectd-unifi';
 
 let args = process.argv;
 args.shift(); //remove node
@@ -79,7 +78,7 @@ if (unifiIndex >= 0) {
 
 function putVal(identifier, values) {
     var milliseconds = (new Date).getTime();
-    process.stdout.write(`PUTVAL "${identifier}" interval=${collectdInterval} ${milliseconds}:${values}\n`);
+    process.stdout.write(`PUTVAL ${identifier} interval=${collectdInterval} ${milliseconds}:${values}\n`);
 }
 
 
@@ -109,11 +108,15 @@ function getAssets() {
 function printControllerStats() {
     return getAssets()
         .then(assets => {
-            putVal(`${unifiConfig.host}/network/assets_count`, assets.length);
+            putVal(`${unifiConfig.host}/assets/gauge-count`, assets.length);
         });
 }
 
+//setInterval(() => {
+//    return printControllerStats();
+//}, collectdInterval * 1000);
 
-setInterval(() => {
-    return printControllerStats();
-}, collectdInterval * 1000);
+return printControllerStats()
+    .then(() => {
+        process.exit(0);
+    });

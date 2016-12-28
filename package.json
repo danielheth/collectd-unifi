@@ -32,7 +32,6 @@
   "homepage": "https://github.com/danielheth/collectd-unifi#readme",
   "dependencies": {
     "bluebird": "^3.4.7",
-    "lodash": "^4.17.3",
     "prompt-sync": "^4.1.4",
     "ubiquiti-unifi": "^1.0.0"
   }
